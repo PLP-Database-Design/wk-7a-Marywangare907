@@ -1,7 +1,7 @@
 -- Transform ProductDetail table into 1NF
 CREATE TABLE ProductDetail_1NF (
     OrderID INT,
-    CustomerName VARCHAR(255),
+    CustomerName VARCHAR(250),
     Product VARCHAR(255)
 );
 
@@ -19,7 +19,7 @@ VALUES
 -- Create Orders table to store OrderID and CustomerName
 CREATE TABLE Orders (
     OrderID INT PRIMARY KEY,
-    CustomerName VARCHAR(255)
+    CustomerName VARCHAR(250)
 );
 
 -- Insert data into Orders table
@@ -32,7 +32,7 @@ VALUES
 -- Create OrderDetails table to store OrderID, Product, and Quantity
 CREATE TABLE OrderDetails (
     OrderID INT,
-    Product VARCHAR(255),
+    Product VARCHAR(250),
     Quantity INT,
     PRIMARY KEY (OrderID, Product),
     FOREIGN KEY (OrderID) REFERENCES Orders(OrderID)
